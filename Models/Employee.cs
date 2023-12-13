@@ -1,5 +1,4 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace DigitalToolLog.Models
@@ -10,9 +9,9 @@ namespace DigitalToolLog.Models
         public int Id;
 
         [ObservableProperty]
-        public string name = string.Empty;
+        private string name = string.Empty;
 
         [ObservableProperty]
-        public int employeeNumber;
+        private int employeeNumber;
     }
 }

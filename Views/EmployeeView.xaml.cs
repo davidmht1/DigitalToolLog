@@ -1,4 +1,3 @@
-using CommunityToolkit.Mvvm.ComponentModel;
 using DigitalToolLog.ViewModel;
 
 namespace DigitalToolLog.Views;

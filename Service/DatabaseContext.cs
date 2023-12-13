@@ -6,6 +6,7 @@ namespace DigitalToolLog.Service
     public class DatabaseContext : DbContext
     {
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Toolbox> Toolboxes { get; set; }
 
         public string DbPath { get; set; }
 
@@ -27,7 +28,12 @@ namespace DigitalToolLog.Service
                 modelBuilder.Entity<Employee>()
                     .HasKey(b => b.Id)
                     .HasName("PrimaryKey");
-          
+            }
+            base.OnModelCreating(modelBuilder);
+            {
+                modelBuilder.Entity<Toolbox>()
+                    .HasKey(b => b.Id)
+                    .HasName("PrimaryKey");
             }
         }
     }

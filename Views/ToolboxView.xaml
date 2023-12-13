@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DigitalToolLog.Views.ToolboxView"
+             xmlns:local="clr-namespace:DigitalToolLog.Views"
+             x:DataType="local:ToolboxView"
+             xmlns:model="clr-namespace:DigitalToolLog.Models"
+             Title="ToolboxView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Entry Placeholder="Enter Toolbox Name"
+               Text="{Binding Entry.Toolbox.Name}"
+               FontSize="20"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"/>
+        <Entry Placeholder="Enter Identifier"
+               Text="{Binding Entry.Toolbox.Identifier}"
+               FontSize="20"
+               Grid.Row="1"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"/>
+        <ListView ItemsSource="{Binding Entry.Message}"
+                  Grid.Row="2"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="2"/>
+        <Button Text="Save Toolbox"
+                Command="{Binding Entry.SaveToolboxCommand}"
+                Grid.Row="3"
+                BackgroundColor="White"
+                MaximumWidthRequest="200"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"/>
+        <CollectionView ItemsSource="{x:Binding Entry.SetModel.ToolboxList}"
+                        ItemsLayout="VerticalList"
+                        SelectionMode="Single"
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2">
+            <CollectionView.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Name"
+                           FontSize="Small"
+                           Padding="20"
+                           HorizontalOptions="Center"/>
+                    <Label Text="Identifier"
+                           FontSize="Small"
+                           Padding="20"
+                           HorizontalOptions="Center"
+                           Grid.Column="1"/>
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Toolbox">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding Name}"
+                               FontSize="Medium"
+                               HorizontalOptions="Center"
+                               Grid.Column="0"/>
+                        <Label Text="{Binding Identifier}" 
+                               FontSize="Medium"
+                               HorizontalOptions="Center"
+                               Grid.Column="1"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
