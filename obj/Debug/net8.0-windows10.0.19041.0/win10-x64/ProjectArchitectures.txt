@@ -1,0 +1,1 @@
+C:\GitFolder\DigitalToolLog\DigitalToolLog.csproj;x64

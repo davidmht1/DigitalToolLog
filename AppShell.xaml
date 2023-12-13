@@ -12,4 +12,7 @@
     <ShellContent Title="Employee"
                   ContentTemplate="{DataTemplate local:EmployeeView}"/>
 
+    <ShellContent Title="ToolInventory"
+                  ContentTemplate="{DataTemplate local:ToolboxView}"/>
+
 </Shell>
