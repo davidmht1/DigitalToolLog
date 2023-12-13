@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DigitalToolLog.Views.EmployeeView"
+             xmlns:local="clr-namespace:DigitalToolLog.Views"
+             xmlns:models="clr-namespace:DigitalToolLog.Models"
+             x:DataType="local:EmployeeView"
+             Title="Employees">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Entry Placeholder="Enter Employee Name"
+               FontSize="20"
+               Text="{Binding Entry.Employee.Name}"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"/>
+        <Entry Placeholder="Enter Employee Number"
+               FontSize="20"
+               Text="{Binding Entry.Employee.EmployeeNumber}"
+               Grid.Row="1"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"/>
+        <ListView x:Name="ErrorList"
+                  ItemsSource="{Binding Entry.Message}"
+                  Grid.Row="2"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="2"/>
+        <Button Text="Save Employee"
+                Command="{Binding Entry.SaveEmployeeCommand}"
+                Grid.Row="3"
+                BackgroundColor="White"
+                MaximumWidthRequest="200"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"/>
+        <CollectionView ItemsSource="{Binding Entry.SetModel.EmployeeList, Mode=TwoWay}"
+                        ItemsLayout="VerticalList"
+                        SelectionMode="Single"
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2">
+            <CollectionView.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Name"
+                           FontSize="Small"
+                           Padding="20"
+                           HorizontalOptions="Center"/>
+                    <Label Text="ID"
+                           FontSize="Small"
+                           Padding="20"
+                           HorizontalOptions="Center"
+                           Grid.Column="1"/>
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Employee">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding Name}"
+                               FontSize="Medium"
+                               HorizontalOptions="Center"
+                               Grid.Column="0"/>
+                        <Label Text="{Binding EmployeeNumber}"
+                               FontSize="Medium"
+                               HorizontalOptions="Center"
+                               Grid.Column="1"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
