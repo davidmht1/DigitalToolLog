@@ -17,53 +17,52 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <VerticalStackLayout>
-                <CollectionView ItemsSource="{x:Binding Entry.EmployeeSet.EmployeeList}"
+            <CollectionView ItemsSource="{x:Binding Entry.EmployeeSet.EmployeeList}"
                             ItemsLayout="VerticalList"
                             SelectionMode="Single"
-                            Grid.Row="0">
-                    <CollectionView.Header>
+                            SelectedItem="{Binding Entry.EmployeeSet.SelectedEmployee,Mode=TwoWay}">
+                <CollectionView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Name"
+                               FontSize="Small"
+                               Padding="20"
+                               HorizontalOptions="Center"/>
+                        <Label Text="ID"
+                               FontSize="Small"
+                               Padding="20"
+                               HorizontalOptions="Center"
+                               Grid.Column="1"/>
+                    </Grid>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Employee">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Label Text="Name"
-                               FontSize="Small"
-                               Padding="20"
-                               HorizontalOptions="Center"/>
-                            <Label Text="ID"
-                               FontSize="Small"
-                               Padding="20"
-                               HorizontalOptions="Center"
-                               Grid.Column="1"/>
-                        </Grid>
-                    </CollectionView.Header>
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="models:Employee">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Name}"
+                            <Label Text="{Binding Name}"
                                    FontSize="Medium"
                                    HorizontalOptions="Center"
                                    Grid.Column="0"/>
-                                <Label Text="{Binding EmployeeNumber}"
+                            <Label Text="{Binding EmployeeNumber}"
                                    FontSize="Medium"
                                    HorizontalOptions="Center"
                                    Grid.Column="1"/>
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </VerticalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
             <CollectionView ItemsSource="{x:Binding Entry.ToolboxSet.ToolboxList}"
                             ItemsLayout="VerticalList"
                             SelectionMode="Single"
+                            SelectedItem="{Binding Entry.ToolboxSet.SelectedToolBox,Mode=TwoWay}"
                             Grid.Column="2">
                 <CollectionView.Header>
                     <Grid>
@@ -105,11 +104,70 @@
                     Command="{Binding Entry.AssignToolCommand}"
                     HeightRequest="20"
                     WidthRequest="200"
-                    Grid.Column="1"
-                    Grid.Row="1"/>
-            <ListView ></ListView>
-            <CollectionView Grid.Column="1"
-                            Grid.Row="2"/>
+                    Grid.Column="1"/>
+            <CollectionView ItemsSource="{Binding Entry.ToolLogSet.ToolLogEntries, Mode=TwoWay}"
+                            ItemsLayout="VerticalList"
+                            SelectionMode="Single"
+                            Grid.Row="3"
+                            Grid.Column="1">
+                <CollectionView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Employee ID"
+                               FontSize="Small"
+                               Padding="20"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Employee"
+                               FontSize="Small"
+                               Padding="20"
+                               HorizontalOptions="Center"
+                           Grid.Column="1"/>
+                        <Label Text="Toolbox Name"
+                               FontSize="Small"
+                               Padding="20"
+                               HorizontalOptions="Center"
+                           Grid.Column="2"/>
+                        <Label Text="Toolbox #"
+                               FontSize="Small"
+                               Padding="20"
+                               HorizontalOptions="Center"
+                               Grid.Column="3"/>
+                    </Grid>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:ToolLog">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Employee.EmployeeNumber}"
+                                   FontSize="Medium"
+                                   HorizontalOptions="Center"
+                                   Grid.Column="0"/>
+                            <Label Text="{Binding Employee.Name}"
+                                   FontSize="Medium"
+                                   HorizontalOptions="Center"
+                               Grid.Column="1"/>
+                            <Label Text="{Binding Toolbox.Name}"
+                                   FontSize="Medium"
+                                   HorizontalOptions="Center"
+                                   Grid.Column="2"/>
+                            <Label Text="{Binding Toolbox.Identifier}"
+                                   FontSize="Medium"
+                                   HorizontalOptions="Center"
+                                   Grid.Column="3"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

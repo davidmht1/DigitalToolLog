@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DigitalToolLog.Models;
+using DigitalToolLog.Service;
+using System.Collections.ObjectModel;
 
 namespace DigitalToolLog.ViewModel
 {
@@ -18,6 +20,8 @@ namespace DigitalToolLog.ViewModel
         [ObservableProperty]
         public ToolLogSet toolLogSet;
 
+        public ObservableCollection<string> Message { get; } = new();
+
         public ToolLogEntry()
         {
             employeeSet = new EmployeeSet();
@@ -28,13 +32,28 @@ namespace DigitalToolLog.ViewModel
         [RelayCommand]
         public void AssignTool()
         {
-            Checkout = new ToolLog()
+            Message.Clear();
+
+            if(EmployeeSet.SelectedEmployee == null)
             {
-                Toolbox = ToolboxSet.SelectedToolBox,
-                Employee = EmployeeSet.SelectedEmployee
-            };
+                Message.Add("No Employee Selected");
+            }
+            if(ToolboxSet.SelectedToolBox == null)
+            {
+                Message.Add("No Toolbox Selected");
+            }
 
-
+            if(Message.Count() == 0)
+            {
+                Checkout = new ToolLog()
+                {
+                    Toolbox = ToolboxSet.SelectedToolBox,
+                    Employee = EmployeeSet.SelectedEmployee
+                };
+                
+                Db.Service().Add(Checkout);
+                ToolLogSet.ToolLogEntries.Add(Checkout);
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ namespace DigitalToolLog.ViewModel
         [ObservableProperty]
         public Employee? selectedEmployee;
 
-        public ObservableCollection<Employee> EmployeeList { get; set; }
+        public ObservableCollection<Employee>? EmployeeList { get; set; }
         
         public EmployeeSet()
         {

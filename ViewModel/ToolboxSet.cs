@@ -9,7 +9,7 @@ namespace DigitalToolLog.ViewModel
     {
         [ObservableProperty]
         public Toolbox? selectedToolBox;
-        public ObservableCollection<Toolbox> ToolboxList { get; set; }
+        public ObservableCollection<Toolbox>? ToolboxList { get; set; }
 
         public ToolboxSet()
         {
