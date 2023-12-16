@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DigitalToolLog</name>
+    </assembly>
+    <members>
+        <member name="T:DigitalToolLog.Models.Employee">
+            <inheritdoc/>
+        </member>
+        <member name="P:DigitalToolLog.Models.Employee.Name">
+            <inheritdoc cref="F:DigitalToolLog.Models.Employee.name"/>
+        </member>
+        <member name="P:DigitalToolLog.Models.Employee.EmployeeNumber">
+            <inheritdoc cref="F:DigitalToolLog.Models.Employee.employeeNumber"/>
+        </member>
+        <member name="T:DigitalToolLog.Models.Toolbox">
+            <inheritdoc/>
+        </member>
+        <member name="P:DigitalToolLog.Models.Toolbox.Name">
+            <inheritdoc cref="F:DigitalToolLog.Models.Toolbox.name"/>
+        </member>
+        <member name="P:DigitalToolLog.Models.Toolbox.Identifier">
+            <inheritdoc cref="F:DigitalToolLog.Models.Toolbox.identifier"/>
+        </member>
+        <member name="T:DigitalToolLog.Models.ToolLog">
+            <inheritdoc/>
+        </member>
+        <member name="P:DigitalToolLog.Models.ToolLog.Time">
+            <inheritdoc cref="F:DigitalToolLog.Models.ToolLog.time"/>
+        </member>
+        <member name="P:DigitalToolLog.Models.ToolLog.Date">
+            <inheritdoc cref="F:DigitalToolLog.Models.ToolLog.date"/>
+        </member>
+        <member name="P:DigitalToolLog.Models.ToolLog.Employee">
+            <inheritdoc cref="F:DigitalToolLog.Models.ToolLog.employee"/>
+        </member>
+        <member name="P:DigitalToolLog.Models.ToolLog.Toolbox">
+            <inheritdoc cref="F:DigitalToolLog.Models.ToolLog.toolbox"/>
+        </member>
+        <member name="T:DigitalToolLog.ViewModel.EmployeeEntry">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.EmployeeEntry.Employee">
+            <inheritdoc cref="F:DigitalToolLog.ViewModel.EmployeeEntry.employee"/>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.EmployeeEntry.SetModel">
+            <inheritdoc cref="F:DigitalToolLog.ViewModel.EmployeeEntry.setModel"/>
+        </member>
+        <member name="F:DigitalToolLog.ViewModel.EmployeeEntry.saveEmployeeCommand">
+            <summary>The backing field for <see cref="P:DigitalToolLog.ViewModel.EmployeeEntry.SaveEmployeeCommand"/>.</summary>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.EmployeeEntry.SaveEmployeeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DigitalToolLog.ViewModel.EmployeeEntry.SaveEmployee"/>.</summary>
+        </member>
+        <member name="T:DigitalToolLog.ViewModel.EmployeeSet">
+            <inheritdoc/>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.EmployeeSet.SelectedEmployee">
+            <inheritdoc cref="F:DigitalToolLog.ViewModel.EmployeeSet.selectedEmployee"/>
+        </member>
+        <member name="T:DigitalToolLog.ViewModel.ToolboxEntry">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.ToolboxEntry.Toolbox">
+            <inheritdoc cref="F:DigitalToolLog.ViewModel.ToolboxEntry.toolbox"/>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.ToolboxEntry.SetModel">
+            <inheritdoc cref="F:DigitalToolLog.ViewModel.ToolboxEntry.setModel"/>
+        </member>
+        <member name="F:DigitalToolLog.ViewModel.ToolboxEntry.saveToolboxCommand">
+            <summary>The backing field for <see cref="P:DigitalToolLog.ViewModel.ToolboxEntry.SaveToolboxCommand"/>.</summary>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.ToolboxEntry.SaveToolboxCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DigitalToolLog.ViewModel.ToolboxEntry.SaveToolbox"/>.</summary>
+        </member>
+        <member name="T:DigitalToolLog.ViewModel.ToolboxSet">
+            <inheritdoc/>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.ToolboxSet.SelectedToolBox">
+            <inheritdoc cref="F:DigitalToolLog.ViewModel.ToolboxSet.selectedToolBox"/>
+        </member>
+        <member name="T:DigitalToolLog.ViewModel.ToolLogEntry">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.ToolLogEntry.Checkout">
+            <inheritdoc cref="F:DigitalToolLog.ViewModel.ToolLogEntry.checkout"/>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.ToolLogEntry.EmployeeSet">
+            <inheritdoc cref="F:DigitalToolLog.ViewModel.ToolLogEntry.employeeSet"/>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.ToolLogEntry.ToolboxSet">
+            <inheritdoc cref="F:DigitalToolLog.ViewModel.ToolLogEntry.toolboxSet"/>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.ToolLogEntry.ToolLogSet">
+            <inheritdoc cref="F:DigitalToolLog.ViewModel.ToolLogEntry.toolLogSet"/>
+        </member>
+        <member name="F:DigitalToolLog.ViewModel.ToolLogEntry.assignToolCommand">
+            <summary>The backing field for <see cref="P:DigitalToolLog.ViewModel.ToolLogEntry.AssignToolCommand"/>.</summary>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.ToolLogEntry.AssignToolCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DigitalToolLog.ViewModel.ToolLogEntry.AssignTool"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EmployeeNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EmployeeNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Identifier">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Identifier" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Time">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Time" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Date">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Date" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Employee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Employee" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Toolbox">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Toolbox" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SetModel">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SetModel" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedEmployee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedToolBox">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedToolBox" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Checkout">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Checkout" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EmployeeSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EmployeeSet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ToolboxSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ToolboxSet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ToolLogSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ToolLogSet" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EmployeeNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EmployeeNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Identifier">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Identifier" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Time">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Time" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Date">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Date" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Employee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Employee" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Toolbox">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Toolbox" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SetModel">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SetModel" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedEmployee">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedEmployee" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedToolBox">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedToolBox" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Checkout">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Checkout" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EmployeeSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EmployeeSet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ToolboxSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ToolboxSet" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ToolLogSet">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ToolLogSet" generated properties.</summary>
+        </member>
+    </members>
+</doc>

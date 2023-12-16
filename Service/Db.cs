@@ -42,5 +42,16 @@ namespace DigitalToolLog.Service
         {
             return db.Toolboxes.ToList();
         }
+
+        public void Add(ToolLog toolLog)
+        {
+            db.ToolLog.Add(toolLog);
+            db.SaveChanges();
+        }
+
+        public List<ToolLog> GetToolLog() 
+        {
+            return db.ToolLog.ToList();        
+        }
     }
 }

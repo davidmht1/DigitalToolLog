@@ -53,3 +53,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DigitalToolLog.Views.ToolboxView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ToolboxView.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ToolboxView.xaml
+
+[C:/GitFolder/DigitalToolLog/Views/ToolLogView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DigitalToolLog.Views.ToolLogView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ToolLogView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ToolLogView.xaml

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DigitalToolLog.Views.EmployeeView"
              xmlns:local="clr-namespace:DigitalToolLog.Views"
+             xmlns:vm="clr-namespace:DigitalToolLog.ViewModel"
              xmlns:models="clr-namespace:DigitalToolLog.Models"
              x:DataType="local:EmployeeView"
              Title="Employees">
@@ -12,7 +13,7 @@
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

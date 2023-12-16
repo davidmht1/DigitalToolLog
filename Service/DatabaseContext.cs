@@ -7,6 +7,7 @@ namespace DigitalToolLog.Service
     {
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Toolbox> Toolboxes { get; set; }
+        public DbSet<ToolLog> ToolLog { get; set; }
 
         public string DbPath { get; set; }
 
@@ -23,18 +24,19 @@ namespace DigitalToolLog.Service
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-            {
-                modelBuilder.Entity<Employee>()
-                    .HasKey(b => b.Id)
-                    .HasName("PrimaryKey");
-            }
-            base.OnModelCreating(modelBuilder);
-            {
-                modelBuilder.Entity<Toolbox>()
-                    .HasKey(b => b.Id)
-                    .HasName("PrimaryKey");
-            }
+
+            modelBuilder.Entity<Employee>()
+                .HasKey(b => b.Id)
+                .HasName("PrimaryKey");
+
+
+            modelBuilder.Entity<Toolbox>()
+                .HasKey(b => b.Id)
+                .HasName("PrimaryKey");
+
+            modelBuilder.Entity<ToolLog>()
+                .HasKey(e => e.logEntryId)
+                .HasName("PrimaryKey");
         }
     }
 }

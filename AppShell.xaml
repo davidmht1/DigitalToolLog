@@ -9,10 +9,13 @@
     <ShellContent Title="Home"
                   ContentTemplate="{DataTemplate local:MainPage}"/>
     
+    <ShellContent Title="Tool Log"
+                  ContentTemplate="{DataTemplate local:ToolLogView}"/>
+
     <ShellContent Title="Employee"
                   ContentTemplate="{DataTemplate local:EmployeeView}"/>
 
-    <ShellContent Title="ToolInventory"
+    <ShellContent Title="Tool Inventory"
                   ContentTemplate="{DataTemplate local:ToolboxView}"/>
 
 </Shell>

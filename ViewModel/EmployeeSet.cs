@@ -7,9 +7,12 @@ namespace DigitalToolLog.ViewModel
 {
     public partial class EmployeeSet: ObservableObject
     {
-        
-        public ObservableCollection<Employee> EmployeeList { get; set; }
 
+        [ObservableProperty]
+        public Employee? selectedEmployee;
+
+        public ObservableCollection<Employee>? EmployeeList { get; set; }
+        
         public EmployeeSet()
         {
             EmployeeList = new ObservableCollection<Employee>(Db.Service().GetEmployees());
