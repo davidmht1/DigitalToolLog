@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DigitalToolLog.Views.ToolLogView"
+             xmlns:local="clr-namespace:DigitalToolLog.Views"
+             xmlns:models="clr-namespace:DigitalToolLog.Models"
+             x:DataType="local:ToolLogView"
+             Title="ToolLog">
+    <VerticalStackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <VerticalStackLayout>
+                <CollectionView ItemsSource="{x:Binding Entry.EmployeeSet.EmployeeList}"
+                            ItemsLayout="VerticalList"
+                            SelectionMode="Single"
+                            Grid.Row="0">
+                    <CollectionView.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Name"
+                               FontSize="Small"
+                               Padding="20"
+                               HorizontalOptions="Center"/>
+                            <Label Text="ID"
+                               FontSize="Small"
+                               Padding="20"
+                               HorizontalOptions="Center"
+                               Grid.Column="1"/>
+                        </Grid>
+                    </CollectionView.Header>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Employee">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Name}"
+                                   FontSize="Medium"
+                                   HorizontalOptions="Center"
+                                   Grid.Column="0"/>
+                                <Label Text="{Binding EmployeeNumber}"
+                                   FontSize="Medium"
+                                   HorizontalOptions="Center"
+                                   Grid.Column="1"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+            <CollectionView ItemsSource="{x:Binding Entry.ToolboxSet.ToolboxList}"
+                            ItemsLayout="VerticalList"
+                            SelectionMode="Single"
+                            Grid.Column="2">
+                <CollectionView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Name"
+                               FontSize="Small"
+                               Padding="20"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Identifier"
+                               FontSize="Small"
+                               Padding="20"
+                               HorizontalOptions="Center"
+                               Grid.Column="1"/>
+                    </Grid>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Toolbox">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Name}"
+                                   FontSize="Medium"
+                                   HorizontalOptions="Center"
+                                   Grid.Column="0"/>
+                            <Label Text="{Binding Identifier}" 
+                                   FontSize="Medium"
+                                   HorizontalOptions="Center"
+                                   Grid.Column="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Text="Assign Tool"
+                    Command="{Binding Entry.AssignToolCommand}"
+                    HeightRequest="20"
+                    WidthRequest="200"
+                    Grid.Column="1"
+                    Grid.Row="1"/>
+            <ListView ></ListView>
+            <CollectionView Grid.Column="1"
+                            Grid.Row="2"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

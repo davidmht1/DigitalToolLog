@@ -7,12 +7,13 @@ namespace DigitalToolLog.ViewModel
 {
     public partial class ToolboxSet: ObservableObject
     {
+        [ObservableProperty]
+        public Toolbox? selectedToolBox;
         public ObservableCollection<Toolbox> ToolboxList { get; set; }
 
         public ToolboxSet()
         {
             ToolboxList = new ObservableCollection<Toolbox>(Db.Service().GetToolboxes());
         }
-
     }
 }
