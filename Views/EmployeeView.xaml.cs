@@ -4,12 +4,9 @@ namespace DigitalToolLog.Views;
 
 public partial class EmployeeView : ContentPage
 {
-	public EmployeeEntry Entry { get; set; }
-
-    public EmployeeView()
+    public EmployeeView(EmployeeEntry empVM)
 	{
-        Entry = new();
-        BindingContext = this;
+        BindingContext = empVM;
         InitializeComponent();
     }
 }

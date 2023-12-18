@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DigitalToolLog.Views.ToolboxView"
              xmlns:local="clr-namespace:DigitalToolLog.Views"
-             x:DataType="local:ToolboxView"
+             xmlns:vm="clr-namespace:DigitalToolLog.ViewModel"
+             x:DataType="vm:ToolboxEntry"
              xmlns:model="clr-namespace:DigitalToolLog.Models"
              Title="ToolboxView">
     <Grid>
@@ -23,28 +24,28 @@
         </Grid.ColumnDefinitions>
 
         <Entry Placeholder="Enter Toolbox Name"
-               Text="{Binding Entry.Toolbox.Name}"
+               Text="{Binding Toolbox.Name}"
                FontSize="20"
                Grid.Column="1"
                Grid.ColumnSpan="2"/>
         <Entry Placeholder="Enter Identifier"
-               Text="{Binding Entry.Toolbox.Identifier}"
+               Text="{Binding Toolbox.Identifier}"
                FontSize="20"
                Grid.Row="1"
                Grid.Column="1"
                Grid.ColumnSpan="2"/>
-        <ListView ItemsSource="{Binding Entry.Message}"
+        <ListView ItemsSource="{Binding Message}"
                   Grid.Row="2"
                   Grid.Column="1"
                   Grid.ColumnSpan="2"/>
         <Button Text="Save Toolbox"
-                Command="{Binding Entry.SaveToolboxCommand}"
+                Command="{Binding SaveToolboxCommand}"
                 Grid.Row="3"
                 BackgroundColor="White"
                 MaximumWidthRequest="200"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
-        <CollectionView ItemsSource="{x:Binding Entry.SetModel.ToolboxList}"
+        <CollectionView ItemsSource="{x:Binding SetModel.ToolboxList}"
                         ItemsLayout="VerticalList"
                         SelectionMode="Single"
                         Grid.Row="4"

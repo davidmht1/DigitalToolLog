@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DigitalToolLog.Models
 {
-    public partial class Toolbox: ObservableObject
+    public partial class Toolbox : ObservableObject
     {
         [Key]
         public int Id;
@@ -13,6 +13,9 @@ namespace DigitalToolLog.Models
 
         [ObservableProperty]
         private string identifier = string.Empty;
+
+        [ObservableProperty]
+        private bool isCheckedOut = false;
         
     }
 }

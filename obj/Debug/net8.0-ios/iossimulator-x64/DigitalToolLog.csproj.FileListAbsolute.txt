@@ -1,6 +1,8 @@
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-ios\iossimulator-x64\DigitalToolLog.runtimeconfig.json
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-ios\iossimulator-x64\DigitalToolLog.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-ios\iossimulator-x64\DigitalToolLog.pdb
+C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
+C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-ios\iossimulator-x64\CommunityToolkit.Mvvm.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.Data.Sqlite.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-ios\iossimulator-x64\Microsoft.EntityFrameworkCore.dll
@@ -282,9 +284,6 @@ C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@2x.png
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\sp\splash_58C11A0A2CDF3C43117FC29EECA319E6FBFEFE150B9123BB20E86A467F499449@3x.png
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\mauisplash.stamp
-C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
-C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
-C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
@@ -297,6 +296,9 @@ C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
+C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
+C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\mauiimage.stamp
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-ios\iossimulator-x64\mauifont.stamp

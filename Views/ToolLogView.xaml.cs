@@ -4,11 +4,9 @@ namespace DigitalToolLog.Views;
 
 public partial class ToolLogView : ContentPage
 {
-	public ToolLogEntry? Entry { get; }
-	public ToolLogView()
+	public ToolLogView(ToolLogEntry logVM)
 	{
-		Entry = new();
-		BindingContext = this;
+		BindingContext = logVM;
 		InitializeComponent();
 	}
 }

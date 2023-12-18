@@ -15,12 +15,14 @@ namespace DigitalToolLog.ViewModel
         [ObservableProperty]
         public ToolboxSet setModel;
 
+        bool allBoxes = true;
+
         public ObservableCollection<string> Message { get; } = new();
 
         public ToolboxEntry()
         {
             toolbox = new Toolbox();
-            setModel = new ToolboxSet();
+            setModel = new ToolboxSet(allBoxes);
         }
 
         [RelayCommand]

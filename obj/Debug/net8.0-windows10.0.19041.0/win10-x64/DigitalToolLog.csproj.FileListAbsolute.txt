@@ -6,6 +6,8 @@ C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Digit
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DigitalToolLog.pdb
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
+C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
+C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Mvvm.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Data.Sqlite.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.EntityFrameworkCore.dll
@@ -50,6 +52,7 @@ C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Micro
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Speech.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
 C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\cs\Microsoft.Maui.Controls.resources.dll

@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:DigitalToolLog.Views"
              xmlns:vm="clr-namespace:DigitalToolLog.ViewModel"
              xmlns:models="clr-namespace:DigitalToolLog.Models"
-             x:DataType="local:EmployeeView"
+             x:DataType="vm:EmployeeEntry"
              Title="Employees">
     <Grid>
         <Grid.RowDefinitions>
@@ -24,28 +24,28 @@
 
         <Entry Placeholder="Enter Employee Name"
                FontSize="20"
-               Text="{Binding Entry.Employee.Name}"
+               Text="{Binding Employee.Name}"
                Grid.Column="1"
                Grid.ColumnSpan="2"/>
         <Entry Placeholder="Enter Employee Number"
                FontSize="20"
-               Text="{Binding Entry.Employee.EmployeeNumber}"
+               Text="{Binding Employee.EmployeeNumber}"
                Grid.Row="1"
                Grid.Column="1"
                Grid.ColumnSpan="2"/>
         <ListView x:Name="ErrorList"
-                  ItemsSource="{Binding Entry.Message}"
+                  ItemsSource="{Binding Message}"
                   Grid.Row="2"
                   Grid.Column="1"
                   Grid.ColumnSpan="2"/>
         <Button Text="Save Employee"
-                Command="{Binding Entry.SaveEmployeeCommand}"
+                Command="{Binding SaveEmployeeCommand}"
                 Grid.Row="3"
                 BackgroundColor="White"
                 MaximumWidthRequest="200"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
-        <CollectionView ItemsSource="{Binding Entry.SetModel.EmployeeList, Mode=TwoWay}"
+        <CollectionView ItemsSource="{Binding SetModel.EmployeeList, Mode=TwoWay}"
                         ItemsLayout="VerticalList"
                         SelectionMode="Single"
                         Grid.Row="4"

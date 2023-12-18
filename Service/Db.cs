@@ -1,4 +1,5 @@
 ﻿using DigitalToolLog.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace DigitalToolLog.Service
@@ -38,9 +39,20 @@ namespace DigitalToolLog.Service
             db.SaveChanges();
         }
 
+        public void Update(Toolbox toolbox)
+        {
+            db.Toolboxes.Update(toolbox);
+            db.SaveChanges();
+        }
+
         public List<Toolbox> GetToolboxes()
         {
             return db.Toolboxes.ToList();
+        }
+
+        public List<Toolbox> AvailableToolboxes()
+        {
+            return db.Toolboxes.Where(t => t.IsCheckedOut == false).ToList();
         }
 
         public void Add(ToolLog toolLog)
@@ -49,9 +61,11 @@ namespace DigitalToolLog.Service
             db.SaveChanges();
         }
 
-        public List<ToolLog> GetToolLog() 
+        public List<ToolLog> GetToolLog()
         {
-            return db.ToolLog.ToList();        
+            return db.ToolLog
+                .Include(t => t.Toolbox)
+                .ToList();
         }
     }
 }

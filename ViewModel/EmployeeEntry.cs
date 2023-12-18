@@ -41,7 +41,7 @@ namespace DigitalToolLog.ViewModel
                 try
                 {
                     Db.Service().Add(Employee);
-                    SetModel.EmployeeList.Add(Employee);
+                    setModel.EmployeeList.Add(Employee);
                     Message.Add($"{Employee.Name} added succesfully.");
 
                     Employee = new();
