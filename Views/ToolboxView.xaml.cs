@@ -1,13 +1,25 @@
+using CommunityToolkit.Maui.Views;
 using DigitalToolLog.ViewModel;
-using System.Security.Cryptography.X509Certificates;
 
 namespace DigitalToolLog.Views;
 
 public partial class ToolboxView : ContentPage
 {
-	public ToolboxView(ToolboxEntry boxVM)
+    ToolboxEntry Model;
+	public ToolboxView()
 	{
-		BindingContext = boxVM;
+        Model = new ToolboxEntry();
+        BindingContext = Model;
 		InitializeComponent();
 	}
+
+    private async void MenuFlyoutItem_Clicked(object sender, EventArgs e)
+    {
+        if(Model.SetModel.SelectedToolBox != null)
+        {
+            //replace with navigation push and pop
+            var popup = new ToolboxEditPopUp(Model.SetModel.SelectedToolBox);
+            var result = await this.ShowPopupAsync(popup, CancellationToken.None);
+        }
+    }
 }

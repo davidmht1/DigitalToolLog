@@ -1,0 +1,43 @@
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:model="clr-namespace:DigitalToolLog.Models"
+               x:DataType="model:Toolbox"
+               x:Class="DigitalToolLog.Views.ToolboxEditPopUp"
+               Size="300,200"
+               HorizontalOptions="Center"
+               Color="Black"
+               VerticalOptions="Center"
+               CanBeDismissedByTappingOutsideOfPopup="False">
+    <VerticalStackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Entry Text="{x:Binding Name,Mode=TwoWay}"
+                   TextColor="White"
+                   FontSize="14"
+                   Grid.ColumnSpan="2"/>
+            <Entry Text="{x:Binding Identifier,Mode=TwoWay}"
+                   TextColor="White"
+                   FontSize="14"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"/>
+            <Button Text="Save"
+                    Clicked="Save"
+                    Grid.Row="2"            
+                    Padding="10"/>
+            <Button Text="Cancel"
+                    Padding="10"
+                    Clicked="Close"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+        </Grid>
+    </VerticalStackLayout>
+</toolkit:Popup>

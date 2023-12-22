@@ -1,14 +1,16 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Maui.Core;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DigitalToolLog.Models;
 using DigitalToolLog.Service;
+using DigitalToolLog.Views;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace DigitalToolLog.ViewModel
 {
-    public partial class ToolboxEntry: ObservableObject
+    public partial class ToolboxEntry : ObservableObject
     {
-
         [ObservableProperty]
         public Toolbox toolbox;
 
@@ -24,7 +26,6 @@ namespace DigitalToolLog.ViewModel
             toolbox = new Toolbox();
             setModel = new ToolboxSet(allBoxes);
         }
-
         [RelayCommand]
         public void SaveToolbox()
         {

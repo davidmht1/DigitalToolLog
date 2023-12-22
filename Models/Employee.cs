@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace DigitalToolLog.Models
 {
     [Index(nameof(EmployeeNumber), IsUnique = true)]
-    public partial class Employee: ObservableObject
+    public partial class Employee : ObservableObject
     {
         [Key]
         public int Id;

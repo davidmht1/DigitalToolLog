@@ -2,7 +2,6 @@
 using DigitalToolLog.Models;
 using DigitalToolLog.Service;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 
 namespace DigitalToolLog.ViewModel
 {

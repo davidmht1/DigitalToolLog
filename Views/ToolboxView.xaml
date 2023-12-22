@@ -45,12 +45,20 @@
                 MaximumWidthRequest="200"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
-        <CollectionView ItemsSource="{x:Binding SetModel.ToolboxList}"
+        <CollectionView x:Name="EmployeeList"
+                        ItemsSource="{x:Binding SetModel.ToolboxList}"
                         ItemsLayout="VerticalList"
                         SelectionMode="Single"
+                        SelectedItem="{x:Binding SetModel.SelectedToolBox,Mode=TwoWay}"
                         Grid.Row="4"
                         Grid.Column="1"
                         Grid.ColumnSpan="2">
+            <FlyoutBase.ContextFlyout>
+                <MenuFlyout x:Name="FlyOut">
+                    <MenuFlyoutItem Text="Edit Item"
+                                    Clicked="MenuFlyoutItem_Clicked"/>
+                </MenuFlyout>
+            </FlyoutBase.ContextFlyout>
             <CollectionView.Header>
                 <Grid>
                     <Grid.ColumnDefinitions>
