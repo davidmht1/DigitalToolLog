@@ -29,7 +29,6 @@ namespace DigitalToolLog
             builder.Services.AddSingleton<ToolboxEntry>();
             builder.Services.AddSingleton<ToolLogView>();
             builder.Services.AddSingleton<ToolLogEntry>();
-            builder.Services.AddTransientPopup<ToolboxEditPopUp, ToolboxEntry>();
             builder.Logging.AddDebug();
 #endif
 

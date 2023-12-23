@@ -57,5 +57,35 @@ namespace DigitalToolLog.ViewModel
                 }
             }
         }
+        [RelayCommand]
+        public void UpdateToolbox()
+        {
+            Message.Clear();
+
+            if (SetModel.SelectedToolBox.Name == string.Empty)
+            {
+                Message.Add("Enter toolbox name. ");
+            }
+            if (SetModel.SelectedToolBox.Identifier == string.Empty)
+            {
+                Message.Add("Enter toolbox identifier.");
+            }
+
+            if (Message.Count == 0)
+            {
+                try
+                {
+                    Db.Service().Update(SetModel.SelectedToolBox);
+                    Message.Add($"{SetModel.SelectedToolBox.Name} edited succesfully.");
+
+                    Toolbox = new();
+
+                }
+                catch (Exception ex)
+                {
+                    Message.Add(ex.Message);
+                }
+            }
+        }
     }
 }

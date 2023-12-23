@@ -1,4 +1,5 @@
 using CommunityToolkit.Maui.Views;
+using CommunityToolkit.Mvvm.Input;
 using DigitalToolLog.ViewModel;
 
 namespace DigitalToolLog.Views;
@@ -12,14 +13,9 @@ public partial class ToolboxView : ContentPage
         BindingContext = Model;
 		InitializeComponent();
 	}
-
-    private async void MenuFlyoutItem_Clicked(object sender, EventArgs e)
+    private async void Edit(object sender, EventArgs e)
     {
-        if(Model.SetModel.SelectedToolBox != null)
-        {
-            //replace with navigation push and pop
-            var popup = new ToolboxEditPopUp(Model.SetModel.SelectedToolBox);
-            var result = await this.ShowPopupAsync(popup, CancellationToken.None);
-        }
+        await Navigation.PushAsync(new EditToolbox(Model));
+
     }
 }

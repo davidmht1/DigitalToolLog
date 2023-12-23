@@ -47,7 +47,6 @@
                 Grid.ColumnSpan="2"/>
         <CollectionView x:Name="EmployeeList"
                         ItemsSource="{x:Binding SetModel.ToolboxList}"
-                        ItemsLayout="VerticalList"
                         SelectionMode="Single"
                         SelectedItem="{x:Binding SetModel.SelectedToolBox,Mode=TwoWay}"
                         Grid.Row="4"
@@ -56,7 +55,7 @@
             <FlyoutBase.ContextFlyout>
                 <MenuFlyout x:Name="FlyOut">
                     <MenuFlyoutItem Text="Edit Item"
-                                    Clicked="MenuFlyoutItem_Clicked"/>
+                                    Clicked="Edit"/>
                 </MenuFlyout>
             </FlyoutBase.ContextFlyout>
             <CollectionView.Header>

@@ -67,16 +67,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\ToolboxEditPopUp.xaml.cs">
-	    <DependentUpon>ToolboxEditPopUp.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="Views\ToolLogView.xaml.cs">
 	    <DependentUpon>ToolLogView.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\ToolboxEditPopUp.xaml">
+	  <MauiXaml Update="Views\EditToolbox.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EmployeeView.xaml">
