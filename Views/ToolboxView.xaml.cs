@@ -7,12 +7,12 @@ namespace DigitalToolLog.Views;
 public partial class ToolboxView : ContentPage
 {
     ToolboxEntry Model;
-	public ToolboxView()
-	{
+    public ToolboxView()
+    {
         Model = new ToolboxEntry();
         BindingContext = Model;
-		InitializeComponent();
-	}
+        InitializeComponent();
+    }
     private async void Edit(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new EditToolbox(Model));

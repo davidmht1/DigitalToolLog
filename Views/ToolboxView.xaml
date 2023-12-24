@@ -58,7 +58,7 @@
                 </MenuFlyout>
             </FlyoutBase.ContextFlyout>
             <CollectionView.Header>
-                <Grid Style="{StaticResource SelectableGrid}">
+                <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
