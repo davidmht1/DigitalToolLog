@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-18T01:25:49.425</Modified>
+      <Modified>2023-12-24T17:07:41.730</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-12-17T21:45:02.250</Modified>
+      <Modified>2023-12-24T16:58:22.878</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DigitalToolLog.runtimeconfig.json">
       <PackagePath>DigitalToolLog.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DigitalToolLog.dll">
       <PackagePath>DigitalToolLog.dll</PackagePath>
-      <Modified>2023-12-18T01:25:48.605</Modified>
+      <Modified>2023-12-24T17:07:41.428</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>DigitalToolLog.exe</PackagePath>
-      <Modified>2023-12-18T01:25:48.643</Modified>
+      <Modified>2023-12-24T17:07:41.431</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -267,27 +267,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-12-17T21:40:25.300</Modified>
+      <Modified>2023-12-24T16:43:48.890</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-12-17T21:40:25.309</Modified>
+      <Modified>2023-12-24T16:43:48.899</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-12-17T21:40:25.317</Modified>
+      <Modified>2023-12-24T16:43:48.932</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-12-17T21:40:25.332</Modified>
+      <Modified>2023-12-24T16:43:48.963</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-12-17T21:40:25.397</Modified>
+      <Modified>2023-12-24T16:43:49.014</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple_tool_box.scale-100.jpg">
+      <PackagePath>purple_tool_box.scale-100.jpg</PackagePath>
+      <Modified>2023-12-24T16:54:32.216</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\GitFolder\DigitalToolLog\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DigitalToolLog.deps.json">
       <PackagePath>DigitalToolLog.deps.json</PackagePath>
-      <Modified>2023-12-17T21:45:02.200</Modified>
+      <Modified>2023-12-24T16:58:22.710</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

@@ -1088,3 +1088,4 @@ C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-android\stamp\_ConvertResourcesCase
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-android\resizetizer\r\drawable\purple_tool_box.jpg

@@ -1,13 +1,21 @@
+using CommunityToolkit.Maui.Views;
+using CommunityToolkit.Mvvm.Input;
 using DigitalToolLog.ViewModel;
-using System.Security.Cryptography.X509Certificates;
 
 namespace DigitalToolLog.Views;
 
 public partial class ToolboxView : ContentPage
 {
-	public ToolboxView(ToolboxEntry boxVM)
-	{
-		BindingContext = boxVM;
-		InitializeComponent();
-	}
+    ToolboxEntry Model;
+    public ToolboxView()
+    {
+        Model = new ToolboxEntry();
+        BindingContext = Model;
+        InitializeComponent();
+    }
+    private async void Edit(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new EditToolbox(Model));
+
+    }
 }

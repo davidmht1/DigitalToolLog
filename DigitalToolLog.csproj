@@ -57,6 +57,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\purple_tool_box.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
@@ -73,6 +77,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Styles\ResourceDictionary.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EditToolbox.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\EmployeeView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

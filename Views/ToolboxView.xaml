@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DigitalToolLog.Views.ToolboxView"
              xmlns:local="clr-namespace:DigitalToolLog.Views"
+             xmlns:model="clr-namespace:DigitalToolLog.Models"
              xmlns:vm="clr-namespace:DigitalToolLog.ViewModel"
              x:DataType="vm:ToolboxEntry"
-             xmlns:model="clr-namespace:DigitalToolLog.Models"
-             Title="ToolboxView">
+             Title="Tool Inventory">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
@@ -41,16 +41,22 @@
         <Button Text="Save Toolbox"
                 Command="{Binding SaveToolboxCommand}"
                 Grid.Row="3"
-                BackgroundColor="White"
                 MaximumWidthRequest="200"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
-        <CollectionView ItemsSource="{x:Binding SetModel.ToolboxList}"
-                        ItemsLayout="VerticalList"
+        <CollectionView x:Name="EmployeeList"
+                        ItemsSource="{x:Binding SetModel.ToolboxList}"
                         SelectionMode="Single"
+                        SelectedItem="{x:Binding SetModel.SelectedToolBox,Mode=TwoWay}"
                         Grid.Row="4"
                         Grid.Column="1"
                         Grid.ColumnSpan="2">
+            <FlyoutBase.ContextFlyout>
+                <MenuFlyout x:Name="FlyOut">
+                    <MenuFlyoutItem Text="Edit Item"
+                                    Clicked="Edit"/>
+                </MenuFlyout>
+            </FlyoutBase.ContextFlyout>
             <CollectionView.Header>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -70,13 +76,14 @@
             </CollectionView.Header>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Toolbox">
-                    <Grid>
+                    <Grid Style="{StaticResource SelectGrid}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Label Text="{Binding Name}"
                                FontSize="Medium"
+                               TextTransform="Uppercase"
                                HorizontalOptions="Center"
                                Grid.Column="0"/>
                         <Label Text="{Binding Identifier}" 

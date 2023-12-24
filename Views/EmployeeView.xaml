@@ -41,7 +41,6 @@
         <Button Text="Save Employee"
                 Command="{Binding SaveEmployeeCommand}"
                 Grid.Row="3"
-                BackgroundColor="White"
                 MaximumWidthRequest="200"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
@@ -70,7 +69,7 @@
             </CollectionView.Header>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:Employee">
-                    <Grid>
+                    <Grid Style="{StaticResource SelectGrid}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>

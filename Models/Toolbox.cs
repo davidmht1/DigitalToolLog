@@ -1,8 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace DigitalToolLog.Models
 {
+    [Index(nameof(Identifier), IsUnique = true)]
     public partial class Toolbox : ObservableObject
     {
         [Key]
@@ -16,6 +18,5 @@ namespace DigitalToolLog.Models
 
         [ObservableProperty]
         private bool isCheckedOut = false;
-        
     }
 }
