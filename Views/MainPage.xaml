@@ -7,23 +7,19 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+            
             <Image
-                Source="dotnet_bot.png"
+                Source="purple_tool_box.jpg"
                 HeightRequest="185"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" />
-
-            <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-
+            
             <Label
                 Text="Welcome to David's Digital Tool Log"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level3"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-            
+
         </VerticalStackLayout>
     </ScrollView>
 

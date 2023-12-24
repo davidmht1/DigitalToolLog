@@ -4,7 +4,7 @@
              x:Class="DigitalToolLog.Views.EditToolbox"
              xmlns:local="clr-namespace:DigitalToolLog.ViewModel"
              x:DataType="local:ToolboxEntry"
-             Title="EditToolbox">
+             Title="Tool Edit">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>

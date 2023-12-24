@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DigitalToolLog")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+3fcb61a384098f2a3aa4a272b1f52684d014b003")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+c060a00b9407ab97a402afe1c367610aebf0ead8")]
 [assembly: System.Reflection.AssemblyProductAttribute("DigitalToolLog")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DigitalToolLog")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

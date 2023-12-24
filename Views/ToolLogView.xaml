@@ -49,7 +49,7 @@
                 </CollectionView.Header>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Employee">
-                        <Grid>
+                        <Grid Style="{StaticResource SelectGrid}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
@@ -90,7 +90,7 @@
                 </CollectionView.Header>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Toolbox">
-                        <Grid>
+                        <Grid Style="{StaticResource SelectGrid}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
@@ -114,7 +114,6 @@
                     Grid.Column="1"/>
             <CollectionView ItemsSource="{Binding ToolLogSet.ToolLogEntries, Mode=TwoWay}"
                             ItemsLayout="VerticalList"
-                            SelectionMode="Single"
                             Grid.Row="3"
                             Grid.Column="1">
                 <CollectionView.Header>
@@ -148,7 +147,7 @@
                 </CollectionView.Header>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:ToolLog">
-                        <Grid>
+                        <Grid Style="{StaticResource SelectGrid}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
