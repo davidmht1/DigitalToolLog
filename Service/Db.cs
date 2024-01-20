@@ -27,7 +27,6 @@ namespace DigitalToolLog.Service
             db.Employees.Add(employee);
             db.SaveChanges();
         }
-
         public List<Employee> GetEmployees()
         {
             return db.Employees.ToList();
@@ -44,7 +43,11 @@ namespace DigitalToolLog.Service
             db.Toolboxes.Update(toolbox);
             db.SaveChanges();
         }
-
+        public void Delete(Toolbox toolbox)
+        {
+            db.Toolboxes.Remove(toolbox);
+            db.SaveChanges();
+        }
         public List<Toolbox> GetToolboxes()
         {
             return db.Toolboxes.ToList();
@@ -60,7 +63,16 @@ namespace DigitalToolLog.Service
             db.ToolLog.Add(toolLog);
             db.SaveChanges();
         }
-
+        public void Update(ToolLog toolLog)
+        {
+            db.ToolLog.Update(toolLog);
+            db.SaveChanges();
+        }
+        public void Delete(ToolLog toolLog)
+        {
+            db.ToolLog.Remove(toolLog);
+            db.SaveChanges();
+        }
         public List<ToolLog> GetToolLog()
         {
             return db.ToolLog

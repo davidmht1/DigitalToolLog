@@ -1,11 +1,8 @@
-﻿using CommunityToolkit.Maui.Core;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DigitalToolLog.Models;
 using DigitalToolLog.Service;
-using DigitalToolLog.Views;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 
 namespace DigitalToolLog.ViewModel
 {
@@ -85,6 +82,21 @@ namespace DigitalToolLog.ViewModel
                 {
                     Message.Add(ex.Message);
                 }
+            }
+        }
+        [RelayCommand]
+        public void DeleteToolbox()
+        {
+            Message.Clear();
+
+            try
+            {
+                Db.Service().Delete(SetModel.SelectedToolBox);
+                SetModel.ToolboxList.Remove(SetModel.SelectedToolBox);
+            }
+            catch (Exception ex)
+            {
+                Message.Add(ex.Message);
             }
         }
     }

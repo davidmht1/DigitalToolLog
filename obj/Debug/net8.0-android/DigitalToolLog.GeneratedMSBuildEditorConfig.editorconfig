@@ -46,6 +46,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = DigitalToolLog.Styles.Reso
 build_metadata.AdditionalFiles.TargetPath = Styles\ResourceDictionary.xaml
 build_metadata.AdditionalFiles.RelativePath = Styles\ResourceDictionary.xaml
 
+[C:/GitFolder/DigitalToolLog/Views/EditEmployee.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DigitalToolLog.Views.EditEmployee.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EditEmployee.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EditEmployee.xaml
+
 [C:/GitFolder/DigitalToolLog/Views/EditToolbox.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DigitalToolLog.Views.EditToolbox.xaml

@@ -314,3 +314,6 @@ C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\refint\
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\DigitalToolLog.pdb
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\DigitalToolLog.genruntimeconfig.cache
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\DigitalToolLog.dll
+C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\purple_tool_box.jpg
+C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\delete.png
+C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\edit.png

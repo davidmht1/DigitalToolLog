@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 
 namespace DigitalToolLog.ViewModel
 {
-    public partial class ToolLogEntry: ObservableObject
+    public partial class ToolLogEntry : ObservableObject
     {
         [ObservableProperty]
         public ToolLog? checkout;
@@ -34,9 +34,9 @@ namespace DigitalToolLog.ViewModel
         public void PageLoading()
         {
             //needs optimizing 
-            foreach(var employee in Db.Service().GetEmployees())
+            foreach (var employee in Db.Service().GetEmployees())
             {
-                if(!employeeSet.EmployeeList.Contains(employee))
+                if (!employeeSet.EmployeeList.Contains(employee))
                 {
                     employeeSet.EmployeeList.Add(employee);
                 }
@@ -56,16 +56,16 @@ namespace DigitalToolLog.ViewModel
         {
             Message.Clear();
 
-            if(EmployeeSet.SelectedEmployee == null)
+            if (EmployeeSet.SelectedEmployee == null)
             {
                 Message.Add("No Employee Selected");
             }
-            if(ToolboxSet.SelectedToolBox == null)
+            if (ToolboxSet.SelectedToolBox == null)
             {
                 Message.Add("No Toolbox Selected");
             }
 
-            if(Message.Count() == 0)
+            if (Message.Count() == 0)
             {
                 var box = ToolboxSet.SelectedToolBox;
 
@@ -77,11 +77,30 @@ namespace DigitalToolLog.ViewModel
 
                 box.IsCheckedOut = true;
                 Db.Service().Update(box);
-                
+
                 Db.Service().Add(Checkout);
                 ToolLogSet.ToolLogEntries.Add(Checkout);
 
                 ToolboxSet.ToolboxList.Remove(box);
+            }
+        }
+        [RelayCommand]
+        public void CheckIn()
+        {
+            if (ToolLogSet.SelectedLogEntry != null)
+            {
+                var logEntry = ToolLogSet.SelectedLogEntry;
+                var toolbox = ToolLogSet.SelectedLogEntry.Toolbox;
+
+
+                toolbox.IsCheckedOut = false;
+                Db.Service().Update(toolbox);
+
+                ToolboxSet.ToolboxList.Add(toolbox);
+
+                ToolLogSet.ToolLogEntries.Remove(logEntry);
+                Db.Service().Delete(logEntry);
+
             }
         }
     }

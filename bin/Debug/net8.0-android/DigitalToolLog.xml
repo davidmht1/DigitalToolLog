@@ -66,6 +66,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:DigitalToolLog.ViewModel.ToolboxEntry.Toolbox">
             <inheritdoc cref="F:DigitalToolLog.ViewModel.ToolboxEntry.toolbox"/>
@@ -84,6 +85,12 @@
         </member>
         <member name="P:DigitalToolLog.ViewModel.ToolboxEntry.UpdateToolboxCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DigitalToolLog.ViewModel.ToolboxEntry.UpdateToolbox"/>.</summary>
+        </member>
+        <member name="F:DigitalToolLog.ViewModel.ToolboxEntry.deleteToolboxCommand">
+            <summary>The backing field for <see cref="P:DigitalToolLog.ViewModel.ToolboxEntry.DeleteToolboxCommand"/>.</summary>
+        </member>
+        <member name="P:DigitalToolLog.ViewModel.ToolboxEntry.DeleteToolboxCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:DigitalToolLog.ViewModel.ToolboxEntry.DeleteToolbox"/>.</summary>
         </member>
         <member name="T:DigitalToolLog.ViewModel.ToolboxSet">
             <inheritdoc/>

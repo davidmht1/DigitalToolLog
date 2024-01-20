@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DigitalToolLog.Views.EmployeeView"
@@ -44,12 +43,22 @@
                 MaximumWidthRequest="200"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
-        <CollectionView ItemsSource="{Binding SetModel.EmployeeList, Mode=TwoWay}"
-                        ItemsLayout="VerticalList"
+        <CollectionView ItemsSource="{Binding SetModel.EmployeeList}"
                         SelectionMode="Single"
+                        SelectedItem="{Binding SetModel.SelectedEmployee,Mode=TwoWay}"
                         Grid.Row="4"
                         Grid.Column="1"
                         Grid.ColumnSpan="2">
+            <FlyoutBase.ContextFlyout>
+                <MenuFlyout x:Name="FlyOut">
+                    <MenuFlyoutItem Text="Edit Employee"
+                                    Clicked="Edit"
+                                    IconImageSource="edit.png"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Delete Employee"
+                                    IconImageSource="delete.png"/>
+                </MenuFlyout>
+            </FlyoutBase.ContextFlyout>
             <CollectionView.Header>
                 <Grid>
                     <Grid.ColumnDefinitions>

@@ -4,9 +4,16 @@ namespace DigitalToolLog.Views;
 
 public partial class EmployeeView : ContentPage
 {
-    public EmployeeView(EmployeeEntry empVM)
+    EmployeeEntry Model;
+    public EmployeeView()
 	{
-        BindingContext = empVM;
+        Model = new EmployeeEntry();
+        BindingContext = Model;
         InitializeComponent();
+    }
+
+    private async void Edit(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new EditEmployee(Model));
     }
 }

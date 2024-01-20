@@ -113,9 +113,19 @@
                     WidthRequest="200"
                     Grid.Column="1"/>
             <CollectionView ItemsSource="{Binding ToolLogSet.ToolLogEntries, Mode=TwoWay}"
+                            SelectedItem="{x:Binding ToolLogSet.SelectedLogEntry}"
+                            SelectionMode="Single"
                             ItemsLayout="VerticalList"
                             Grid.Row="3"
                             Grid.Column="1">
+                <FlyoutBase.ContextFlyout>
+                    <MenuFlyout x:Name="FlyOut">
+                        <MenuFlyoutItem Text="Check In Tool"
+                                        Command="{x:Binding CheckInCommand}"
+                                        IconImageSource="edit.png"/>
+                        <MenuFlyoutSeparator/>
+                    </MenuFlyout>
+                </FlyoutBase.ContextFlyout>
                 <CollectionView.Header>
                     <Grid>
                         <Grid.ColumnDefinitions>

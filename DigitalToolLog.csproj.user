@@ -14,6 +14,9 @@
     <MauiXaml Update="Styles\ResourceDictionary.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\EditEmployee.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\EditToolbox.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

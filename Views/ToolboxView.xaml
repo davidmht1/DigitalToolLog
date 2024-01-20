@@ -45,16 +45,21 @@
                 Grid.Column="1"
                 Grid.ColumnSpan="2"/>
         <CollectionView x:Name="EmployeeList"
-                        ItemsSource="{x:Binding SetModel.ToolboxList}"
+                        ItemsSource="{Binding SetModel.ToolboxList}"
                         SelectionMode="Single"
-                        SelectedItem="{x:Binding SetModel.SelectedToolBox,Mode=TwoWay}"
+                        SelectedItem="{Binding SetModel.SelectedToolBox,Mode=TwoWay}"
                         Grid.Row="4"
                         Grid.Column="1"
                         Grid.ColumnSpan="2">
             <FlyoutBase.ContextFlyout>
                 <MenuFlyout x:Name="FlyOut">
-                    <MenuFlyoutItem Text="Edit Item"
-                                    Clicked="Edit"/>
+                    <MenuFlyoutItem Text="Edit Tool"
+                                    Clicked="Edit"
+                                    IconImageSource="edit.png"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem Text="Delete Tool"
+                                    IconImageSource="delete.png"
+                                    Command="{Binding DeleteToolboxCommand}"/>
                 </MenuFlyout>
             </FlyoutBase.ContextFlyout>
             <CollectionView.Header>

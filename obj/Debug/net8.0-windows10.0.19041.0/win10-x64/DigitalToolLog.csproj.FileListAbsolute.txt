@@ -193,3 +193,5 @@ C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\quali
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
 C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\purple_tool_box.scale-100.jpg
+C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\edit.scale-100.png
+C:\GitFolder\DigitalToolLog\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-100.png

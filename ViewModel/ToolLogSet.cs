@@ -7,6 +7,8 @@ namespace DigitalToolLog.ViewModel
 {
     public partial class ToolLogSet : ObservableObject
     {
+        [ObservableProperty]
+        public ToolLog selectedLogEntry;
         public ObservableCollection<ToolLog> ToolLogEntries { get; set; }
 
         public ToolLogSet()
